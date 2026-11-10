@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="nl">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hubbers Holding B.V.</title>
+    <meta name="description" content="Hubbers Holding B.V., Berg en Dalseweg 303, 6522 CJ Nijmegen. KvK 76989224.">
+    <meta name="theme-color" content="#1c1c1c">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&amp;display=swap" rel="stylesheet">
+    <style>
+      :root {
+        --bg: #1c1c1c;
+        --ink: #ffffff;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      html {
+        color-scheme: dark;
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        min-height: 100%;
+        min-height: 100dvh;
+        display: grid;
+        grid-template-rows: 1fr auto;
+        justify-items: center;
+        align-items: center;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+        font-weight: 500;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        padding: clamp(1.5rem, 4vw, 2.5rem);
+      }
+
+      .plate {
+        width: max-content;
+        max-width: 100%;
+      }
+
+      .lockup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0;
+        font-size: clamp(2.15rem, 5.4vw, 3.25rem);
+        font-weight: 700;
+        line-height: 1;
+        text-align: center;
+      }
+
+      .mark {
+        width: 2.42em;
+        height: auto;
+        display: block;
+        fill: currentColor;
+        overflow: visible;
+      }
+
+      .bar,
+      .joint {
+        transform-box: fill-box;
+        transform-origin: center bottom;
+        transform: scaleY(0);
+        animation: rise 460ms cubic-bezier(0.33, 1, 0.68, 1) both;
+      }
+
+      .joint {
+        animation-duration: 260ms;
+        animation-delay: 400ms;
+      }
+
+      .bar-right {
+        animation-duration: 520ms;
+        animation-delay: 620ms;
+      }
+
+      @keyframes rise {
+        to {
+          transform: scaleY(1);
+        }
+      }
+
+      .word {
+        display: block;
+        margin-top: 0.58em;
+        letter-spacing: 0.06em;
+        margin-right: -0.06em;
+        text-transform: uppercase;
+      }
+
+      .holding {
+        display: block;
+        margin-top: 0.7em;
+        font-size: 0.4em;
+        font-weight: 500;
+        letter-spacing: 0.5em;
+        margin-right: -0.5em;
+        text-transform: uppercase;
+      }
+
+      .imprint {
+        justify-self: start;
+        margin-top: clamp(2rem, 6vh, 3.5rem);
+        font-size: 0.95rem;
+        line-height: 1.65;
+        letter-spacing: 0.01em;
+        text-align: left;
+      }
+
+      address {
+        display: inline;
+        font-style: normal;
+      }
+
+      a {
+        color: inherit;
+        text-decoration-line: underline;
+        text-decoration-color: transparent;
+        text-decoration-thickness: 1px;
+        text-underline-offset: 0.22em;
+      }
+
+      a:hover,
+      a:focus-visible {
+        text-decoration-color: currentColor;
+      }
+
+      a:focus-visible {
+        outline: 2px solid currentColor;
+        outline-offset: 3px;
+      }
+
+      ::selection {
+        background: var(--ink);
+        color: var(--bg);
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        .bar,
+        .joint {
+          animation: none;
+          transform: none;
+          opacity: 1;
+        }
+      }
+
+      @media print {
+        body {
+          background: #ffffff;
+          color: #1c1c1c;
+        }
+
+        .bar,
+        .joint {
+          animation: none;
+          transform: none;
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="plate">
+      <h1 class="lockup">
+        <svg class="mark" viewBox="0 0 160 205" aria-hidden="true">
+          <rect class="bar bar-left" x="0" y="47" width="52" height="158"/>
+          <rect class="joint" x="61" y="99" width="38" height="38"/>
+          <rect class="bar bar-right" x="108" y="0" width="52" height="205"/>
+        </svg>
+        <span class="word">Hubbers</span>
+        <span class="holding">Holding</span>
+      </h1>
+    </main>
+    <footer class="imprint">
+      Hubbers Holding B.V.<br>
+      <address><a href="https://www.google.com/maps/search/?api=1&amp;query=Berg%20en%20Dalseweg%20303%2C%206522%20CJ%20Nijmegen">Berg en Dalseweg 303<br>6522 CJ Nijmegen</a></address><br>
+      <a href="https://www.kvk.nl/zoeken/?q=76989224">KvK 76989224</a>
+    </footer>
+  </body>
+</html>
